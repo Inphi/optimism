@@ -1,0 +1,11 @@
+name: Nighty Release
+
+on:
+  schedule:
+    - cron: '0 10 * * *'
+
+jobs:
+  nightly-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: .github/workflows/release.yml
