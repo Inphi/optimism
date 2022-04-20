@@ -368,13 +368,13 @@ workflows:
       - integration-tests
 
   nightly:
-    triggers:
-      - schedule:
-          cron: "0 10 * * *"
-          filters:
-            branches:
-              only:
-                - develop
+    #triggers:
+    #  - schedule:
+     #     cron: "0 10 * * *"
+      #    filters:
+       #     branches:
+        #      only:
+         #       - develop
     jobs:
       - yarn-monorepo
       - docker-publish:
